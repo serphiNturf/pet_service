@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# pet_service
+This is a pet api service 
+>>>>>>> 6cfc9acc7fa083dbdcf3307661617ba2b52b549a

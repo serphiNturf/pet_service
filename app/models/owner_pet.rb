@@ -1,3 +1,0 @@
-class OwnerPet < ApplicationRecord
-  
-end

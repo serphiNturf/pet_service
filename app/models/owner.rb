@@ -14,6 +14,8 @@ class Owner < ApplicationRecord
   validates :last_name, presence: true
   validates :contact_number, presence: true, uniqueness: true
 
+  has_and_belongs_to_many :pets
+
   def full_name
     first_name + " " + last_name
   end

@@ -14,4 +14,6 @@ class Pet < ApplicationRecord
   validates :gender, presence: true
   validates :species, presence: true
 
+  has_and_belongs_to_many :owners
+
 end

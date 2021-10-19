@@ -16,4 +16,19 @@ class Pet < ApplicationRecord
 
   has_and_belongs_to_many :owners
 
+  def animal_type
+    return Pet.find(id).species
+  end
+
+  def animal_sound
+    if animal_type == "Cat"
+      return "meow"
+    elsif animal_type == "Dog"
+      return "arf"
+    elsif animal_type == "Bird"
+      return "tweet"
+    else "unknown"
+    end
+  end
+
 end

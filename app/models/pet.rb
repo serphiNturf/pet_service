@@ -16,4 +16,10 @@ class Pet < ApplicationRecord
 
   has_and_belongs_to_many :owners
 
+  def animal_sound
+    return 'meow' if species == 'Cat'
+    return 'arf' if species == 'Dog'
+    return 'tweet' if species == 'Bird'
+    'unknown'
+  end
 end

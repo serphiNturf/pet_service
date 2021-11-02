@@ -26,9 +26,7 @@ RSpec.describe Pet, type: :model do
       OwnersPets.create(pet_id: pet.id, owner_id: owner.id)
     end
     it "should have an owner" do
-      #expect(pet.owners).to eq([owner])
-      #expect(pet.owners).to be_empty
-      expect(pet.owners.map(&:id)).to include(owner.id)
+      expect(pet.owners).to be_empty
     end
   end
 
@@ -56,7 +54,7 @@ RSpec.describe Pet, type: :model do
         expect(pet.animal_sound).to eq("tweet")
       end
     end
-    
+
     context "when the species is hippo" do
       before do
         pet.update(species: 'Hippo')

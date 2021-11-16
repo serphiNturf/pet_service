@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: owners_pets
@@ -12,4 +14,3 @@ class OwnersPets < ApplicationRecord
   validates :owner_id, presence: true
   validates :pet_id, presence: true
 end
-

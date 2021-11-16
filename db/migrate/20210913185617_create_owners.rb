@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This migration creates the Owners model
 class CreateOwners < ActiveRecord::Migration[6.0]
   def change
     create_table :owners do |t|

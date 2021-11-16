@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This migration creates the OwnersPets model which links the Pet and Owner models
 class CreateJoinTableOwnerPet < ActiveRecord::Migration[6.0]
   def change
     create_join_table :owners, :pets do |t|

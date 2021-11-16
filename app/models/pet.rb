@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: pets
@@ -20,6 +22,7 @@ class Pet < ApplicationRecord
     return 'meow' if species == 'Cat'
     return 'arf' if species == 'Dog'
     return 'tweet' if species == 'Bird'
+
     'unknown'
   end
 end

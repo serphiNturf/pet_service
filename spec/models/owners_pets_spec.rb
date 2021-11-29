@@ -3,9 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe OwnersPets, type: :model do
-  let(:owner) { FactoryBot.create(:owner) }
-  let(:pet) { FactoryBot.create(:pet) }
-  let(:owners_pets) { OwnersPets.create(pet_id: pet.id, owner_id: owner.id) }
+  let(:owners_pets) {FactoryBot.create(:owners_pets)}
+  let(:owner) {owners_pets.owner}
+  let(:pet) {owners_pets.pet}
 
   it 'should have an owner_id' do
     expect(owners_pets.owner_id).to eq(owner.id)

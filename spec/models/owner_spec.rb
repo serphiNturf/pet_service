@@ -18,7 +18,7 @@ RSpec.describe Owner, type: :model do
   end
 
   context '#full_name' do
-    it 'should should have a first name and last name' do
+    it 'should have a first name and last name' do
       expect(owner.full_name).to eq('James Carter')
     end
   end

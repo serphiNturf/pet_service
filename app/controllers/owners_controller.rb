@@ -13,7 +13,7 @@ class OwnersController < ApplicationController
     if @owner.present?
       render json: @owner
     else
-      render json: { errors: 'not found' }, status: :not_found
+      render json: { errors: 'This owner does not exist' }, status: :not_found
     end
   end
 end

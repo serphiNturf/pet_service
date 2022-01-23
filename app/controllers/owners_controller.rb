@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class OwnersController < ApplicationController
 # GET /owners
   def index
@@ -10,7 +9,6 @@ class OwnersController < ApplicationController
 # GET /owners/1
   def show
     @owner = Owner.where(id: params[:id]).first
-    @owner_pets = Owner.where(id: params[:id]).first.pets
   end
 end
 

@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :owners, :pets
+  defaults format: :json do
+    get '/pets/:id', to: 'pets#show'
+    get '/owners', to: 'owners#index'
+    get '/owners/:id', to: 'owners#show'
+
+    resources :pets, :owners
+
+    namespace :owners do
+      get ':id/pets', to: 'pets#show'
+    end
+
+    namespace :pets do
+      get ':id/owners', to: 'owners#show'
+     end
+  end
 end

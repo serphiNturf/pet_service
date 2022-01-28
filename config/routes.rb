@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   defaults format: :json do
     get '/pets/:id', to: 'pets#show'
-    get '/owners?contact_number', to: 'owners#show'
     get '/owners', to: 'owners#index'
     get '/owners/:id', to: 'owners#show'
 
@@ -18,4 +17,3 @@ Rails.application.routes.draw do
      end
   end
 end
-

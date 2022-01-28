@@ -9,6 +9,9 @@ class OwnersController < ApplicationController
 # GET /owners/1
   def show
     @owner = Owner.where(id: params[:id]).first
+    json.error_message "This owner does not exist"
   end
 end
+
+
 

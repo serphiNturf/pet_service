@@ -5,8 +5,10 @@ Rails.application.routes.draw do
     get '/pets/:id', to: 'pets#show'
     get '/owners', to: 'owners#index'
     get '/owners/:id', to: 'owners#show'
+    delete '/owners/:id', to: 'owners#destroy'
 
-    resources :pets, :owners
+    resources :pets
+    resources :owners, param: :contact_number
 
     namespace :owners do
       get ':id/pets', to: 'pets#show'

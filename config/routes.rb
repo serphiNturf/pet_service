@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get '/owners/:id', to: 'owners#show'
     delete '/owners/:id', to: 'owners#destroy'
 
-    resources :pets
+    resources :pets, param: :name
     resources :owners, param: :contact_number
 
     namespace :owners do

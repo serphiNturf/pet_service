@@ -28,6 +28,7 @@ class OwnersController < ApplicationController
     @owner.destroy
   end
 
+  # GET owner by contact number
   def owner_by_contact_number
     @owner_contact_number = Owner.where(contact_number: params[:contact_number])
     if @owner_contact_number.present?
@@ -38,7 +39,6 @@ class OwnersController < ApplicationController
   end
 
   private
-
     def payload
       {
           message: "This owner does not exist"
